@@ -1,0 +1,1510 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SushiModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="SushiModelStoreContainer">
+    <EntitySet Name="Unit_dimentionNumber" EntityType="SushiModel.Store.Unit_dimentionNumber" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CategoryNumber" EntityType="SushiModel.Store.CategoryNumber" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProductComposeNumber" EntityType="SushiModel.Store.ProductComposeNumber" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserNumber" EntityType="SushiModel.Store.UserNumber" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PersonNmber" EntityType="SushiModel.Store.PersonNmber" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PasportNumber" EntityType="SushiModel.Store.PasportNumber" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PostNumber" EntityType="SushiModel.Store.PostNumber" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmployeeNumber" EntityType="SushiModel.Store.EmployeeNumber" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DutyNumber" EntityType="SushiModel.Store.DutyNumber" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ChangeTypeНабор" EntityType="SushiModel.Store.ChangeTypeНабор" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OrderStatusNumber" EntityType="SushiModel.Store.OrderStatusNumber" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DeliveryTypeNumber" EntityType="SushiModel.Store.DeliveryTypeNumber" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="StoreNumber" EntityType="SushiModel.Store.StoreNumber" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="StoreGoodsNumber" EntityType="SushiModel.Store.StoreGoodsNumber" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DocumentNumber" EntityType="SushiModel.Store.DocumentNumber" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DocumentTypeNumber" EntityType="SushiModel.Store.DocumentTypeNumber" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AdressNumber" EntityType="SushiModel.Store.AdressNumber" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PlaceNumber" EntityType="SushiModel.Store.PlaceNumber" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OrderDeliveryNumber" EntityType="SushiModel.Store.OrderDeliveryNumber" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OrderNumber" EntityType="SushiModel.Store.OrderNumber" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="NomenclatureНабор" EntityType="SushiModel.Store.NomenclatureНабор" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="UnitDimentionNomenclature" Association="SushiModel.Store.UnitDimentionNomenclature">
+      <End Role="UnitDimention" EntitySet="Unit_dimentionNumber" />
+      <End Role="Nomenclature" EntitySet="NomenclatureНабор" />
+    </AssociationSet>
+    <AssociationSet Name="CategoryNomenclature" Association="SushiModel.Store.CategoryNomenclature">
+      <End Role="Category" EntitySet="CategoryNumber" />
+      <End Role="Nomenclature" EntitySet="NomenclatureНабор" />
+    </AssociationSet>
+    <AssociationSet Name="UnitDimentionProductCompose" Association="SushiModel.Store.UnitDimentionProductCompose">
+      <End Role="UnitDimention" EntitySet="Unit_dimentionNumber" />
+      <End Role="ProductCompose" EntitySet="ProductComposeNumber" />
+    </AssociationSet>
+    <AssociationSet Name="PersonUser" Association="SushiModel.Store.PersonUser">
+      <End Role="Person" EntitySet="PersonNmber" />
+      <End Role="User" EntitySet="UserNumber" />
+    </AssociationSet>
+    <AssociationSet Name="PersonPasport" Association="SushiModel.Store.PersonPasport">
+      <End Role="Person" EntitySet="PersonNmber" />
+      <End Role="Pasport" EntitySet="PasportNumber" />
+    </AssociationSet>
+    <AssociationSet Name="PostEmployee" Association="SushiModel.Store.PostEmployee">
+      <End Role="Post" EntitySet="PostNumber" />
+      <End Role="Employee" EntitySet="EmployeeNumber" />
+    </AssociationSet>
+    <AssociationSet Name="PersonEmployee" Association="SushiModel.Store.PersonEmployee">
+      <End Role="Person" EntitySet="PersonNmber" />
+      <End Role="Employee" EntitySet="EmployeeNumber" />
+    </AssociationSet>
+    <AssociationSet Name="EmployeeDuty" Association="SushiModel.Store.EmployeeDuty">
+      <End Role="Employee" EntitySet="EmployeeNumber" />
+      <End Role="Duty" EntitySet="DutyNumber" />
+    </AssociationSet>
+    <AssociationSet Name="StoreStore" Association="SushiModel.Store.StoreStore">
+      <End Role="Store" EntitySet="StoreNumber" />
+      <End Role="Store1" EntitySet="StoreNumber" />
+    </AssociationSet>
+    <AssociationSet Name="DocumentTypeDocument" Association="SushiModel.Store.DocumentTypeDocument">
+      <End Role="DocumentType" EntitySet="DocumentTypeNumber" />
+      <End Role="Document" EntitySet="DocumentNumber" />
+    </AssociationSet>
+    <AssociationSet Name="StoreDocument" Association="SushiModel.Store.StoreDocument">
+      <End Role="Store" EntitySet="StoreNumber" />
+      <End Role="Document" EntitySet="DocumentNumber" />
+    </AssociationSet>
+    <AssociationSet Name="ChangeTypeStoreGoods" Association="SushiModel.Store.ChangeTypeStoreGoods">
+      <End Role="ChangeType" EntitySet="ChangeTypeНабор" />
+      <End Role="StoreGoods" EntitySet="StoreGoodsNumber" />
+    </AssociationSet>
+    <AssociationSet Name="DocumentStoreGoods" Association="SushiModel.Store.DocumentStoreGoods">
+      <End Role="Document" EntitySet="DocumentNumber" />
+      <End Role="StoreGoods" EntitySet="StoreGoodsNumber" />
+    </AssociationSet>
+    <AssociationSet Name="StoreStoreGoods" Association="SushiModel.Store.StoreStoreGoods">
+      <End Role="Store" EntitySet="StoreNumber" />
+      <End Role="StoreGoods" EntitySet="StoreGoodsNumber" />
+    </AssociationSet>
+    <AssociationSet Name="AdressOrderDelivery" Association="SushiModel.Store.AdressOrderDelivery">
+      <End Role="Adress" EntitySet="AdressNumber" />
+      <End Role="OrderDelivery" EntitySet="OrderDeliveryNumber" />
+    </AssociationSet>
+    <AssociationSet Name="OrderStatusOrder" Association="SushiModel.Store.OrderStatusOrder">
+      <End Role="OrderStatus" EntitySet="OrderStatusNumber" />
+      <End Role="Order" EntitySet="OrderNumber" />
+    </AssociationSet>
+    <AssociationSet Name="PersonOrder" Association="SushiModel.Store.PersonOrder">
+      <End Role="Person" EntitySet="PersonNmber" />
+      <End Role="Order" EntitySet="OrderNumber" />
+    </AssociationSet>
+    <AssociationSet Name="DeliveryTypeOrder" Association="SushiModel.Store.DeliveryTypeOrder">
+      <End Role="DeliveryType" EntitySet="DeliveryTypeNumber" />
+      <End Role="Order" EntitySet="OrderNumber" />
+    </AssociationSet>
+    <AssociationSet Name="OrderDeliveryOrder" Association="SushiModel.Store.OrderDeliveryOrder">
+      <End Role="OrderDelivery" EntitySet="OrderDeliveryNumber" />
+      <End Role="Order" EntitySet="OrderNumber" />
+    </AssociationSet>
+    <AssociationSet Name="PlaceOrder" Association="SushiModel.Store.PlaceOrder">
+      <End Role="Place" EntitySet="PlaceNumber" />
+      <End Role="Order" EntitySet="OrderNumber" />
+    </AssociationSet>
+    <AssociationSet Name="DutyOrder" Association="SushiModel.Store.DutyOrder">
+      <End Role="Duty" EntitySet="DutyNumber" />
+      <End Role="Order" EntitySet="OrderNumber" />
+    </AssociationSet>
+    <AssociationSet Name="NomenclatureProductCompose" Association="SushiModel.Store.NomenclatureProductCompose">
+      <End Role="Nomenclature" EntitySet="NomenclatureНабор" />
+      <End Role="ProductCompose" EntitySet="ProductComposeNumber" />
+    </AssociationSet>
+    <AssociationSet Name="NomenclatureProductCompose1" Association="SushiModel.Store.NomenclatureProductCompose1">
+      <End Role="Nomenclature" EntitySet="NomenclatureНабор" />
+      <End Role="ProductCompose" EntitySet="ProductComposeNumber" />
+    </AssociationSet>
+    <AssociationSet Name="NomenclatureStoreGoods" Association="SushiModel.Store.NomenclatureStoreGoods">
+      <End Role="Nomenclature" EntitySet="NomenclatureНабор" />
+      <End Role="StoreGoods" EntitySet="StoreGoodsNumber" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Unit_dimentionNumber">
+    <Key>
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="name" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CategoryNumber">
+    <Key>
+      <PropertyRef Name="idCategory" />
+    </Key>
+    <Property Name="idCategory" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="menuPresence" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="description" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductComposeNumber">
+    <Key>
+      <PropertyRef Name="Nomenclature_idNom" />
+      <PropertyRef Name="Nomenclature_idNom1" />
+    </Key>
+    <Property Name="quantity" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UnitDimentionName" Type="int" Nullable="false" />
+    <Property Name="Nomenclature_idNom" Type="int" Nullable="false" />
+    <Property Name="Nomenclature_idNom1" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserNumber">
+    <Key>
+      <PropertyRef Name="login" />
+    </Key>
+    <Property Name="login" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Person_idPerson" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PersonNmber">
+    <Key>
+      <PropertyRef Name="idPerson" />
+    </Key>
+    <Property Name="idPerson" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="telNum" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="birthDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="snils" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PasportNumber">
+    <Key>
+      <PropertyRef Name="number" />
+    </Key>
+    <Property Name="number" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="getDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="giver" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PersonIdPerson" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PostNumber">
+    <Key>
+      <PropertyRef Name="idPost" />
+    </Key>
+    <Property Name="idPost" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="salary" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployeeNumber">
+    <Key>
+      <PropertyRef Name="Post_idPost" />
+      <PropertyRef Name="Person_idPerson" />
+    </Key>
+    <Property Name="Post_idPost" Type="int" Nullable="false" />
+    <Property Name="firstDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="lastDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="workbookNum" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Person_idPerson" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DutyNumber">
+    <Key>
+      <PropertyRef Name="idDuty" />
+    </Key>
+    <Property Name="EmployeePost_idPost" Type="int" Nullable="false" />
+    <Property Name="EmployeePerson_idPerson" Type="int" Nullable="false" />
+    <Property Name="idDuty" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="hours" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="deduction" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="promotion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="note" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChangeTypeНабор">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="type" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrderStatusNumber">
+    <Key>
+      <PropertyRef Name="idState" />
+    </Key>
+    <Property Name="idState" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="description" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DeliveryTypeNumber">
+    <Key>
+      <PropertyRef Name="idType" />
+    </Key>
+    <Property Name="idType" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="description" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StoreNumber">
+    <Key>
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="name" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Store_name" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StoreGoodsNumber">
+    <Key>
+      <PropertyRef Name="dateTime" />
+      <PropertyRef Name="Document_id" />
+      <PropertyRef Name="Nomenclature_idNom" />
+    </Key>
+    <Property Name="dateTime" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="quantity" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ChangeType_id" Type="int" Nullable="false" />
+    <Property Name="Document_id" Type="int" Nullable="false" />
+    <Property Name="Store_name" Type="int" Nullable="false" />
+    <Property Name="Nomenclature_idNom" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DocumentNumber">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="number" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="date" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DocumentType_id" Type="int" Nullable="false" />
+    <Property Name="Store_name" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DocumentTypeNumber">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="description" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AdressNumber">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="region" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="street" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="house" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="flat" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PlaceNumber">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="description" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrderDeliveryNumber">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DateTime" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Adress_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OrderNumber">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderStatus_idState" Type="int" Nullable="false" />
+    <Property Name="Person_idPerson" Type="int" Nullable="false" />
+    <Property Name="DateTime" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DeliveryType_idType" Type="int" Nullable="false" />
+    <Property Name="OrderDelivery_id" Type="int" Nullable="false" />
+    <Property Name="Place_id" Type="int" Nullable="false" />
+    <Property Name="sale" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Duty_idDuty" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NomenclatureНабор">
+    <Key>
+      <PropertyRef Name="idNom" />
+    </Key>
+    <Property Name="idNom" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="priceIn" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="priceOut" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="menuPresence" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UnitDimention_name" Type="int" Nullable="false" />
+    <Property Name="CategoryIdCategory" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="UnitDimentionNomenclature">
+    <End Role="UnitDimention" Type="SushiModel.Store.Unit_dimentionNumber" Multiplicity="1" />
+    <End Role="Nomenclature" Type="SushiModel.Store.NomenclatureНабор" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UnitDimention">
+        <PropertyRef Name="name" />
+      </Principal>
+      <Dependent Role="Nomenclature">
+        <PropertyRef Name="UnitDimention_name" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CategoryNomenclature">
+    <End Role="Category" Type="SushiModel.Store.CategoryNumber" Multiplicity="1" />
+    <End Role="Nomenclature" Type="SushiModel.Store.NomenclatureНабор" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="idCategory" />
+      </Principal>
+      <Dependent Role="Nomenclature">
+        <PropertyRef Name="CategoryIdCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UnitDimentionProductCompose">
+    <End Role="UnitDimention" Type="SushiModel.Store.Unit_dimentionNumber" Multiplicity="1" />
+    <End Role="ProductCompose" Type="SushiModel.Store.ProductComposeNumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UnitDimention">
+        <PropertyRef Name="name" />
+      </Principal>
+      <Dependent Role="ProductCompose">
+        <PropertyRef Name="UnitDimentionName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PersonUser">
+    <End Role="Person" Type="SushiModel.Store.PersonNmber" Multiplicity="1" />
+    <End Role="User" Type="SushiModel.Store.UserNumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="idPerson" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="Person_idPerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PersonPasport">
+    <End Role="Person" Type="SushiModel.Store.PersonNmber" Multiplicity="1" />
+    <End Role="Pasport" Type="SushiModel.Store.PasportNumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="idPerson" />
+      </Principal>
+      <Dependent Role="Pasport">
+        <PropertyRef Name="PersonIdPerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PostEmployee">
+    <End Role="Post" Type="SushiModel.Store.PostNumber" Multiplicity="1" />
+    <End Role="Employee" Type="SushiModel.Store.EmployeeNumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Post">
+        <PropertyRef Name="idPost" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="Post_idPost" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PersonEmployee">
+    <End Role="Person" Type="SushiModel.Store.PersonNmber" Multiplicity="1" />
+    <End Role="Employee" Type="SushiModel.Store.EmployeeNumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="idPerson" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="Person_idPerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EmployeeDuty">
+    <End Role="Employee" Type="SushiModel.Store.EmployeeNumber" Multiplicity="1" />
+    <End Role="Duty" Type="SushiModel.Store.DutyNumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="Post_idPost" />
+        <PropertyRef Name="Person_idPerson" />
+      </Principal>
+      <Dependent Role="Duty">
+        <PropertyRef Name="EmployeePost_idPost" />
+        <PropertyRef Name="EmployeePerson_idPerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="StoreStore">
+    <End Role="Store" Type="SushiModel.Store.StoreNumber" Multiplicity="*" />
+    <End Role="Store1" Type="SushiModel.Store.StoreNumber" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Store1">
+        <PropertyRef Name="name" />
+      </Principal>
+      <Dependent Role="Store">
+        <PropertyRef Name="Store_name" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DocumentTypeDocument">
+    <End Role="DocumentType" Type="SushiModel.Store.DocumentTypeNumber" Multiplicity="1" />
+    <End Role="Document" Type="SushiModel.Store.DocumentNumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocumentType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Document">
+        <PropertyRef Name="DocumentType_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="StoreDocument">
+    <End Role="Store" Type="SushiModel.Store.StoreNumber" Multiplicity="1" />
+    <End Role="Document" Type="SushiModel.Store.DocumentNumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Store">
+        <PropertyRef Name="name" />
+      </Principal>
+      <Dependent Role="Document">
+        <PropertyRef Name="Store_name" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ChangeTypeStoreGoods">
+    <End Role="ChangeType" Type="SushiModel.Store.ChangeTypeНабор" Multiplicity="1" />
+    <End Role="StoreGoods" Type="SushiModel.Store.StoreGoodsNumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChangeType">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="StoreGoods">
+        <PropertyRef Name="ChangeType_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DocumentStoreGoods">
+    <End Role="Document" Type="SushiModel.Store.DocumentNumber" Multiplicity="1" />
+    <End Role="StoreGoods" Type="SushiModel.Store.StoreGoodsNumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Document">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="StoreGoods">
+        <PropertyRef Name="Document_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="StoreStoreGoods">
+    <End Role="Store" Type="SushiModel.Store.StoreNumber" Multiplicity="1" />
+    <End Role="StoreGoods" Type="SushiModel.Store.StoreGoodsNumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Store">
+        <PropertyRef Name="name" />
+      </Principal>
+      <Dependent Role="StoreGoods">
+        <PropertyRef Name="Store_name" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AdressOrderDelivery">
+    <End Role="Adress" Type="SushiModel.Store.AdressNumber" Multiplicity="1" />
+    <End Role="OrderDelivery" Type="SushiModel.Store.OrderDeliveryNumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Adress">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="OrderDelivery">
+        <PropertyRef Name="Adress_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OrderStatusOrder">
+    <End Role="OrderStatus" Type="SushiModel.Store.OrderStatusNumber" Multiplicity="1" />
+    <End Role="Order" Type="SushiModel.Store.OrderNumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrderStatus">
+        <PropertyRef Name="idState" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="OrderStatus_idState" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PersonOrder">
+    <End Role="Person" Type="SushiModel.Store.PersonNmber" Multiplicity="1" />
+    <End Role="Order" Type="SushiModel.Store.OrderNumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="idPerson" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="Person_idPerson" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DeliveryTypeOrder">
+    <End Role="DeliveryType" Type="SushiModel.Store.DeliveryTypeNumber" Multiplicity="1" />
+    <End Role="Order" Type="SushiModel.Store.OrderNumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeliveryType">
+        <PropertyRef Name="idType" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="DeliveryType_idType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OrderDeliveryOrder">
+    <End Role="OrderDelivery" Type="SushiModel.Store.OrderDeliveryNumber" Multiplicity="1" />
+    <End Role="Order" Type="SushiModel.Store.OrderNumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OrderDelivery">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="OrderDelivery_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PlaceOrder">
+    <End Role="Place" Type="SushiModel.Store.PlaceNumber" Multiplicity="1" />
+    <End Role="Order" Type="SushiModel.Store.OrderNumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Place">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="Place_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DutyOrder">
+    <End Role="Duty" Type="SushiModel.Store.DutyNumber" Multiplicity="1" />
+    <End Role="Order" Type="SushiModel.Store.OrderNumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Duty">
+        <PropertyRef Name="idDuty" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="Duty_idDuty" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="NomenclatureProductCompose">
+    <End Role="Nomenclature" Type="SushiModel.Store.NomenclatureНабор" Multiplicity="1" />
+    <End Role="ProductCompose" Type="SushiModel.Store.ProductComposeNumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nomenclature">
+        <PropertyRef Name="idNom" />
+      </Principal>
+      <Dependent Role="ProductCompose">
+        <PropertyRef Name="Nomenclature_idNom" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="NomenclatureProductCompose1">
+    <End Role="Nomenclature" Type="SushiModel.Store.NomenclatureНабор" Multiplicity="1" />
+    <End Role="ProductCompose" Type="SushiModel.Store.ProductComposeNumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nomenclature">
+        <PropertyRef Name="idNom" />
+      </Principal>
+      <Dependent Role="ProductCompose">
+        <PropertyRef Name="Nomenclature_idNom1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="NomenclatureStoreGoods">
+    <End Role="Nomenclature" Type="SushiModel.Store.NomenclatureНабор" Multiplicity="1" />
+    <End Role="StoreGoods" Type="SushiModel.Store.StoreGoodsNumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nomenclature">
+        <PropertyRef Name="idNom" />
+      </Principal>
+      <Dependent Role="StoreGoods">
+        <PropertyRef Name="Nomenclature_idNom" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="SushiModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="SushiContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Unit_dimentionNumber" EntityType="SushiModel.UnitDimention" />
+          <EntitySet Name="CategoryNumber" EntityType="SushiModel.Category" />
+          <AssociationSet Name="UnitDimentionNomenclature" Association="SushiModel.UnitDimentionNomenclature">
+            <End Role="UnitDimention" EntitySet="Unit_dimentionNumber" />
+            <End Role="Nomenclature" EntitySet="NomenclatureНабор" />
+          </AssociationSet>
+          <AssociationSet Name="CategoryNomenclature" Association="SushiModel.CategoryNomenclature">
+            <End Role="Category" EntitySet="CategoryNumber" />
+            <End Role="Nomenclature" EntitySet="NomenclatureНабор" />
+          </AssociationSet>
+          <EntitySet Name="ProductComposeNumber" EntityType="SushiModel.ProductCompose" />
+          <AssociationSet Name="UnitDimentionProductCompose" Association="SushiModel.UnitDimentionProductCompose">
+            <End Role="UnitDimention" EntitySet="Unit_dimentionNumber" />
+            <End Role="ProductCompose" EntitySet="ProductComposeNumber" />
+          </AssociationSet>
+          <EntitySet Name="UserNumber" EntityType="SushiModel.User" />
+          <EntitySet Name="PersonNmber" EntityType="SushiModel.Person" />
+          <AssociationSet Name="PersonUser" Association="SushiModel.PersonUser">
+            <End Role="Person" EntitySet="PersonNmber" />
+            <End Role="User" EntitySet="UserNumber" />
+          </AssociationSet>
+          <EntitySet Name="PasportNumber" EntityType="SushiModel.Pasport" />
+          <AssociationSet Name="PersonPasport" Association="SushiModel.PersonPasport">
+            <End Role="Person" EntitySet="PersonNmber" />
+            <End Role="Pasport" EntitySet="PasportNumber" />
+          </AssociationSet>
+          <EntitySet Name="PostNumber" EntityType="SushiModel.Post" />
+          <EntitySet Name="EmployeeNumber" EntityType="SushiModel.Employee" />
+          <AssociationSet Name="PostEmployee" Association="SushiModel.PostEmployee">
+            <End Role="Post" EntitySet="PostNumber" />
+            <End Role="Employee" EntitySet="EmployeeNumber" />
+          </AssociationSet>
+          <EntitySet Name="DutyNumber" EntityType="SushiModel.Duty" />
+          <AssociationSet Name="PersonEmployee" Association="SushiModel.PersonEmployee">
+            <End Role="Person" EntitySet="PersonNmber" />
+            <End Role="Employee" EntitySet="EmployeeNumber" />
+          </AssociationSet>
+          <AssociationSet Name="EmployeeDuty" Association="SushiModel.EmployeeDuty">
+            <End Role="Employee" EntitySet="EmployeeNumber" />
+            <End Role="Duty" EntitySet="DutyNumber" />
+          </AssociationSet>
+          <EntitySet Name="ChangeTypeНабор" EntityType="SushiModel.ChangeType" />
+          <EntitySet Name="OrderStatusNumber" EntityType="SushiModel.OrderStatus" />
+          <EntitySet Name="DeliveryTypeNumber" EntityType="SushiModel.DeliveryType" />
+          <EntitySet Name="StoreNumber" EntityType="SushiModel.Store" />
+          <AssociationSet Name="StoreStore" Association="SushiModel.StoreStore">
+            <End Role="Store" EntitySet="StoreNumber" />
+            <End Role="Store1" EntitySet="StoreNumber" />
+          </AssociationSet>
+          <EntitySet Name="StoreGoodsNumber" EntityType="SushiModel.StoreGoods" />
+          <EntitySet Name="DocumentNumber" EntityType="SushiModel.Document" />
+          <EntitySet Name="DocumentTypeNumber" EntityType="SushiModel.DocumentType" />
+          <AssociationSet Name="DocumentTypeDocument" Association="SushiModel.DocumentTypeDocument">
+            <End Role="DocumentType" EntitySet="DocumentTypeNumber" />
+            <End Role="Document" EntitySet="DocumentNumber" />
+          </AssociationSet>
+          <AssociationSet Name="StoreDocument" Association="SushiModel.StoreDocument">
+            <End Role="Store" EntitySet="StoreNumber" />
+            <End Role="Document" EntitySet="DocumentNumber" />
+          </AssociationSet>
+          <AssociationSet Name="ChangeTypeStoreGoods" Association="SushiModel.ChangeTypeStoreGoods">
+            <End Role="ChangeType" EntitySet="ChangeTypeНабор" />
+            <End Role="StoreGoods" EntitySet="StoreGoodsNumber" />
+          </AssociationSet>
+          <AssociationSet Name="DocumentStoreGoods" Association="SushiModel.DocumentStoreGoods">
+            <End Role="Document" EntitySet="DocumentNumber" />
+            <End Role="StoreGoods" EntitySet="StoreGoodsNumber" />
+          </AssociationSet>
+          <AssociationSet Name="StoreStoreGoods" Association="SushiModel.StoreStoreGoods">
+            <End Role="Store" EntitySet="StoreNumber" />
+            <End Role="StoreGoods" EntitySet="StoreGoodsNumber" />
+          </AssociationSet>
+          <EntitySet Name="AdressNumber" EntityType="SushiModel.Adress" />
+          <EntitySet Name="PlaceNumber" EntityType="SushiModel.Place" />
+          <EntitySet Name="OrderDeliveryNumber" EntityType="SushiModel.OrderDelivery" />
+          <AssociationSet Name="AdressOrderDelivery" Association="SushiModel.AdressOrderDelivery">
+            <End Role="Adress" EntitySet="AdressNumber" />
+            <End Role="OrderDelivery" EntitySet="OrderDeliveryNumber" />
+          </AssociationSet>
+          <EntitySet Name="OrderNumber" EntityType="SushiModel.Order" />
+          <AssociationSet Name="OrderStatusOrder" Association="SushiModel.OrderStatusOrder">
+            <End Role="OrderStatus" EntitySet="OrderStatusNumber" />
+            <End Role="Order" EntitySet="OrderNumber" />
+          </AssociationSet>
+          <AssociationSet Name="PersonOrder" Association="SushiModel.PersonOrder">
+            <End Role="Person" EntitySet="PersonNmber" />
+            <End Role="Order" EntitySet="OrderNumber" />
+          </AssociationSet>
+          <AssociationSet Name="DeliveryTypeOrder" Association="SushiModel.DeliveryTypeOrder">
+            <End Role="DeliveryType" EntitySet="DeliveryTypeNumber" />
+            <End Role="Order" EntitySet="OrderNumber" />
+          </AssociationSet>
+          <AssociationSet Name="OrderDeliveryOrder" Association="SushiModel.OrderDeliveryOrder">
+            <End Role="OrderDelivery" EntitySet="OrderDeliveryNumber" />
+            <End Role="Order" EntitySet="OrderNumber" />
+          </AssociationSet>
+          <AssociationSet Name="PlaceOrder" Association="SushiModel.PlaceOrder">
+            <End Role="Place" EntitySet="PlaceNumber" />
+            <End Role="Order" EntitySet="OrderNumber" />
+          </AssociationSet>
+          <AssociationSet Name="DutyOrder" Association="SushiModel.DutyOrder">
+            <End Role="Duty" EntitySet="DutyNumber" />
+            <End Role="Order" EntitySet="OrderNumber" />
+          </AssociationSet>
+          <EntitySet Name="NomenclatureНабор" EntityType="SushiModel.Nomenclature" />
+          <AssociationSet Name="NomenclatureProductCompose" Association="SushiModel.NomenclatureProductCompose">
+            <End Role="Nomenclature" EntitySet="NomenclatureНабор" />
+            <End Role="ProductCompose" EntitySet="ProductComposeNumber" />
+          </AssociationSet>
+          <AssociationSet Name="NomenclatureProductCompose1" Association="SushiModel.NomenclatureProductCompose1">
+            <End Role="Nomenclature" EntitySet="NomenclatureНабор" />
+            <End Role="ProductCompose" EntitySet="ProductComposeNumber" />
+          </AssociationSet>
+          <AssociationSet Name="NomenclatureStoreGoods" Association="SushiModel.NomenclatureStoreGoods">
+            <End Role="Nomenclature" EntitySet="NomenclatureНабор" />
+            <End Role="StoreGoods" EntitySet="StoreGoodsNumber" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="UnitDimention">
+          <Key>
+            <PropertyRef Name="name" />
+          </Key>
+          <Property Type="Int32" Name="name" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Nomenclature" Relationship="SushiModel.UnitDimentionNomenclature" FromRole="UnitDimention" ToRole="Nomenclature" />
+          <NavigationProperty Name="ProductCompose" Relationship="SushiModel.UnitDimentionProductCompose" FromRole="UnitDimention" ToRole="ProductCompose" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="idCategory" />
+          </Key>
+          <Property Type="Int32" Name="idCategory" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="name" Nullable="false" />
+          <Property Type="String" Name="menuPresence" Nullable="false" />
+          <Property Type="String" Name="description" Nullable="false" />
+          <NavigationProperty Name="Nomenclature" Relationship="SushiModel.CategoryNomenclature" FromRole="Category" ToRole="Nomenclature" />
+        </EntityType>
+        <EntityType Name="Nomenclature">
+          <Key>
+            <PropertyRef Name="idNom" />
+          </Key>
+          <Property Type="Int32" Name="idNom" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="priceIn" Nullable="false" />
+          <Property Type="String" Name="priceOut" Nullable="false" />
+          <Property Type="String" Name="menuPresence" Nullable="false" />
+          <Property Type="String" Name="description" Nullable="false" />
+          <NavigationProperty Name="UnitDimention" Relationship="SushiModel.UnitDimentionNomenclature" FromRole="Nomenclature" ToRole="UnitDimention" />
+          <Property Type="Int32" Name="UnitDimention_name" Nullable="false" />
+          <NavigationProperty Name="Category" Relationship="SushiModel.CategoryNomenclature" FromRole="Nomenclature" ToRole="Category" />
+          <Property Type="Int32" Name="CategoryIdCategory" Nullable="false" />
+          <NavigationProperty Name="ProductCompose" Relationship="SushiModel.NomenclatureProductCompose" FromRole="Nomenclature" ToRole="ProductCompose" />
+          <NavigationProperty Name="ProductCompose1" Relationship="SushiModel.NomenclatureProductCompose1" FromRole="Nomenclature" ToRole="ProductCompose" />
+          <NavigationProperty Name="StoreGoods" Relationship="SushiModel.NomenclatureStoreGoods" FromRole="Nomenclature" ToRole="StoreGoods" />
+        </EntityType>
+        <Association Name="UnitDimentionNomenclature">
+          <End Type="SushiModel.UnitDimention" Role="UnitDimention" Multiplicity="1" />
+          <End Type="SushiModel.Nomenclature" Role="Nomenclature" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UnitDimention">
+              <PropertyRef Name="name" />
+            </Principal>
+            <Dependent Role="Nomenclature">
+              <PropertyRef Name="UnitDimention_name" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CategoryNomenclature">
+          <End Type="SushiModel.Category" Role="Category" Multiplicity="1" />
+          <End Type="SushiModel.Nomenclature" Role="Nomenclature" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="idCategory" />
+            </Principal>
+            <Dependent Role="Nomenclature">
+              <PropertyRef Name="CategoryIdCategory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ProductCompose" >
+          <Key>
+            <PropertyRef Name="Nomenclature_idNom" />
+            <PropertyRef Name="Nomenclature_idNom1" />
+          </Key>
+          <Property Type="String" Name="quantity" Nullable="false" />
+          <NavigationProperty Name="UnitDimention" Relationship="SushiModel.UnitDimentionProductCompose" FromRole="ProductCompose" ToRole="UnitDimention" />
+          <Property Type="Int32" Name="UnitDimentionName" Nullable="false" />
+          <NavigationProperty Name="Nomenclature" Relationship="SushiModel.NomenclatureProductCompose" FromRole="ProductCompose" ToRole="Nomenclature" />
+          <Property Type="Int32" Name="Nomenclature_idNom" Nullable="false" />
+          <NavigationProperty Name="Nomenclature1" Relationship="SushiModel.NomenclatureProductCompose1" FromRole="ProductCompose" ToRole="Nomenclature" />
+          <Property Type="Int32" Name="Nomenclature_idNom1" Nullable="false" />
+        </EntityType>
+        <Association Name="UnitDimentionProductCompose">
+          <End Type="SushiModel.UnitDimention" Role="UnitDimention" Multiplicity="1" />
+          <End Type="SushiModel.ProductCompose" Role="ProductCompose" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UnitDimention">
+              <PropertyRef Name="name" />
+            </Principal>
+            <Dependent Role="ProductCompose">
+              <PropertyRef Name="UnitDimentionName" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="login" />
+          </Key>
+          <Property Type="Int32" Name="login" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="password" Nullable="false" />
+          <NavigationProperty Name="Person" Relationship="SushiModel.PersonUser" FromRole="User" ToRole="Person" />
+          <Property Type="Int32" Name="Person_idPerson" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="idPerson" />
+          </Key>
+          <Property Type="Int32" Name="idPerson" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="name" Nullable="false" />
+          <Property Type="String" Name="telNum" Nullable="false" />
+          <Property Type="String" Name="birthDate" Nullable="false" />
+          <Property Type="String" Name="snils" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="SushiModel.PersonUser" FromRole="Person" ToRole="User" />
+          <NavigationProperty Name="Pasport" Relationship="SushiModel.PersonPasport" FromRole="Person" ToRole="Pasport" />
+          <NavigationProperty Name="Employee" Relationship="SushiModel.PersonEmployee" FromRole="Person" ToRole="Employee" />
+          <NavigationProperty Name="Order" Relationship="SushiModel.PersonOrder" FromRole="Person" ToRole="Order" />
+        </EntityType>
+        <Association Name="PersonUser">
+          <End Type="SushiModel.Person" Role="Person" Multiplicity="1" />
+          <End Type="SushiModel.User" Role="User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="idPerson" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="Person_idPerson" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Pasport">
+          <Key>
+            <PropertyRef Name="number" />
+          </Key>
+          <Property Type="Int32" Name="number" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="getDate" Nullable="false" />
+          <Property Type="String" Name="giver" Nullable="false" />
+          <NavigationProperty Name="Person" Relationship="SushiModel.PersonPasport" FromRole="Pasport" ToRole="Person" />
+          <Property Type="Int32" Name="PersonIdPerson" Nullable="false" />
+        </EntityType>
+        <Association Name="PersonPasport">
+          <End Type="SushiModel.Person" Role="Person" Multiplicity="1" />
+          <End Type="SushiModel.Pasport" Role="Pasport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="idPerson" />
+            </Principal>
+            <Dependent Role="Pasport">
+              <PropertyRef Name="PersonIdPerson" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Post">
+          <Key>
+            <PropertyRef Name="idPost" />
+          </Key>
+          <Property Type="Int32" Name="idPost" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="description" Nullable="false" />
+          <Property Type="String" Name="salary" Nullable="false" />
+          <NavigationProperty Name="Employee" Relationship="SushiModel.PostEmployee" FromRole="Post" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Employee" >
+          <Key>
+            <PropertyRef Name="Post_idPost" />
+            <PropertyRef Name="Person_idPerson" />
+          </Key>
+          <NavigationProperty Name="Post" Relationship="SushiModel.PostEmployee" FromRole="Employee" ToRole="Post" />
+          <Property Type="Int32" Name="Post_idPost" Nullable="false" />
+          <Property Type="String" Name="firstDate" Nullable="false" />
+          <Property Type="String" Name="lastDate" Nullable="false" />
+          <Property Type="String" Name="workbookNum" Nullable="false" />
+          <NavigationProperty Name="Person" Relationship="SushiModel.PersonEmployee" FromRole="Employee" ToRole="Person" />
+          <Property Type="Int32" Name="Person_idPerson" Nullable="false" />
+          <NavigationProperty Name="Duty" Relationship="SushiModel.EmployeeDuty" FromRole="Employee" ToRole="Duty" />
+        </EntityType>
+        <Association Name="PostEmployee">
+          <End Type="SushiModel.Post" Role="Post" Multiplicity="1" />
+          <End Type="SushiModel.Employee" Role="Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Post">
+              <PropertyRef Name="idPost" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="Post_idPost" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Duty" >
+          <Key>
+            <PropertyRef Name="idDuty" />
+          </Key>
+          <NavigationProperty Name="Employee" Relationship="SushiModel.EmployeeDuty" FromRole="Duty" ToRole="Employee" />
+          <Property Type="Int32" Name="EmployeePost_idPost" Nullable="false" />
+          <Property Type="Int32" Name="EmployeePerson_idPerson" Nullable="false" />
+          <Property Type="String" Name="idDuty" Nullable="false" />
+          <Property Type="String" Name="hours" Nullable="false" />
+          <Property Type="String" Name="deduction" Nullable="false" />
+          <Property Type="String" Name="promotion" Nullable="false" />
+          <Property Type="String" Name="note" Nullable="false" />
+          <NavigationProperty Name="Order" Relationship="SushiModel.DutyOrder" FromRole="Duty" ToRole="Order" />
+        </EntityType>
+        <Association Name="PersonEmployee">
+          <End Type="SushiModel.Person" Role="Person" Multiplicity="1" />
+          <End Type="SushiModel.Employee" Role="Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="idPerson" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="Person_idPerson" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="EmployeeDuty">
+          <End Type="SushiModel.Employee" Role="Employee" Multiplicity="1" />
+          <End Type="SushiModel.Duty" Role="Duty" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="Post_idPost" />
+              <PropertyRef Name="Person_idPerson" />
+            </Principal>
+            <Dependent Role="Duty">
+              <PropertyRef Name="EmployeePost_idPost" />
+              <PropertyRef Name="EmployeePerson_idPerson" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ChangeType">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="type" Nullable="false" />
+          <NavigationProperty Name="StoreGoods" Relationship="SushiModel.ChangeTypeStoreGoods" FromRole="ChangeType" ToRole="StoreGoods" />
+        </EntityType>
+        <EntityType Name="OrderStatus">
+          <Key>
+            <PropertyRef Name="idState" />
+          </Key>
+          <Property Type="Int32" Name="idState" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="description" Nullable="false" />
+          <NavigationProperty Name="Order" Relationship="SushiModel.OrderStatusOrder" FromRole="OrderStatus" ToRole="Order" />
+        </EntityType>
+        <EntityType Name="DeliveryType">
+          <Key>
+            <PropertyRef Name="idType" />
+          </Key>
+          <Property Type="Int32" Name="idType" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="name" Nullable="false" />
+          <Property Type="String" Name="description" Nullable="false" />
+          <NavigationProperty Name="Order" Relationship="SushiModel.DeliveryTypeOrder" FromRole="DeliveryType" ToRole="Order" />
+        </EntityType>
+        <EntityType Name="Store">
+          <Key>
+            <PropertyRef Name="name" />
+          </Key>
+          <Property Type="Int32" Name="name" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="description" Nullable="false" />
+          <NavigationProperty Name="Store1" Relationship="SushiModel.StoreStore" FromRole="Store" ToRole="Store1" />
+          <NavigationProperty Name="Store2" Relationship="SushiModel.StoreStore" FromRole="Store1" ToRole="Store" />
+          <Property Type="Int32" Name="Store_name" Nullable="false" />
+          <NavigationProperty Name="Document" Relationship="SushiModel.StoreDocument" FromRole="Store" ToRole="Document" />
+          <NavigationProperty Name="StoreGoods" Relationship="SushiModel.StoreStoreGoods" FromRole="Store" ToRole="StoreGoods" />
+        </EntityType>
+        <Association Name="StoreStore">
+          <End Type="SushiModel.Store" Role="Store" Multiplicity="*" />
+          <End Type="SushiModel.Store" Role="Store1" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="Store1">
+              <PropertyRef Name="name" />
+            </Principal>
+            <Dependent Role="Store">
+              <PropertyRef Name="Store_name" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="StoreGoods" >
+          <Key>
+            <PropertyRef Name="dateTime" />
+            <PropertyRef Name="Document_id" />
+            <PropertyRef Name="Nomenclature_idNom" />
+          </Key>
+          <Property Type="String" Name="dateTime" Nullable="false" />
+          <Property Type="String" Name="quantity" Nullable="false" />
+          <NavigationProperty Name="ChangeType" Relationship="SushiModel.ChangeTypeStoreGoods" FromRole="StoreGoods" ToRole="ChangeType" />
+          <Property Type="Int32" Name="ChangeType_id" Nullable="false" />
+          <NavigationProperty Name="Document" Relationship="SushiModel.DocumentStoreGoods" FromRole="StoreGoods" ToRole="Document" />
+          <Property Type="Int32" Name="Document_id" Nullable="false" />
+          <NavigationProperty Name="Store" Relationship="SushiModel.StoreStoreGoods" FromRole="StoreGoods" ToRole="Store" />
+          <Property Type="Int32" Name="Store_name" Nullable="false" />
+          <NavigationProperty Name="Nomenclature" Relationship="SushiModel.NomenclatureStoreGoods" FromRole="StoreGoods" ToRole="Nomenclature" />
+          <Property Type="Int32" Name="Nomenclature_idNom" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Document">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="number" Nullable="false" />
+          <Property Type="String" Name="date" Nullable="false" />
+          <NavigationProperty Name="DocumentType" Relationship="SushiModel.DocumentTypeDocument" FromRole="Document" ToRole="DocumentType" />
+          <Property Type="Int32" Name="DocumentType_id" Nullable="false" />
+          <NavigationProperty Name="Store" Relationship="SushiModel.StoreDocument" FromRole="Document" ToRole="Store" />
+          <Property Type="Int32" Name="Store_name" Nullable="false" />
+          <NavigationProperty Name="StoreGoods" Relationship="SushiModel.DocumentStoreGoods" FromRole="Document" ToRole="StoreGoods" />
+        </EntityType>
+        <EntityType Name="DocumentType">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="name" Nullable="false" />
+          <Property Type="String" Name="description" Nullable="false" />
+          <NavigationProperty Name="Document" Relationship="SushiModel.DocumentTypeDocument" FromRole="DocumentType" ToRole="Document" />
+        </EntityType>
+        <Association Name="DocumentTypeDocument">
+          <End Type="SushiModel.DocumentType" Role="DocumentType" Multiplicity="1" />
+          <End Type="SushiModel.Document" Role="Document" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DocumentType">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Document">
+              <PropertyRef Name="DocumentType_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="StoreDocument">
+          <End Type="SushiModel.Store" Role="Store" Multiplicity="1" />
+          <End Type="SushiModel.Document" Role="Document" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Store">
+              <PropertyRef Name="name" />
+            </Principal>
+            <Dependent Role="Document">
+              <PropertyRef Name="Store_name" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ChangeTypeStoreGoods">
+          <End Type="SushiModel.ChangeType" Role="ChangeType" Multiplicity="1" />
+          <End Type="SushiModel.StoreGoods" Role="StoreGoods" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ChangeType">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="StoreGoods">
+              <PropertyRef Name="ChangeType_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="DocumentStoreGoods">
+          <End Type="SushiModel.Document" Role="Document" Multiplicity="1" />
+          <End Type="SushiModel.StoreGoods" Role="StoreGoods" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Document">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="StoreGoods">
+              <PropertyRef Name="Document_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="StoreStoreGoods">
+          <End Type="SushiModel.Store" Role="Store" Multiplicity="1" />
+          <End Type="SushiModel.StoreGoods" Role="StoreGoods" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Store">
+              <PropertyRef Name="name" />
+            </Principal>
+            <Dependent Role="StoreGoods">
+              <PropertyRef Name="Store_name" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Adress">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="region" Nullable="false" />
+          <Property Type="String" Name="street" Nullable="false" />
+          <Property Type="String" Name="house" Nullable="false" />
+          <Property Type="String" Name="flat" Nullable="false" />
+          <NavigationProperty Name="OrderDelivery" Relationship="SushiModel.AdressOrderDelivery" FromRole="Adress" ToRole="OrderDelivery" />
+        </EntityType>
+        <EntityType Name="Place">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="description" Nullable="false" />
+          <NavigationProperty Name="Order" Relationship="SushiModel.PlaceOrder" FromRole="Place" ToRole="Order" />
+        </EntityType>
+        <EntityType Name="OrderDelivery">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="description" Nullable="false" />
+          <Property Type="String" Name="DateTime" Nullable="false" />
+          <NavigationProperty Name="Adress" Relationship="SushiModel.AdressOrderDelivery" FromRole="OrderDelivery" ToRole="Adress" />
+          <Property Type="Int32" Name="Adress_id" Nullable="false" />
+          <NavigationProperty Name="Order" Relationship="SushiModel.OrderDeliveryOrder" FromRole="OrderDelivery" ToRole="Order" />
+        </EntityType>
+        <Association Name="AdressOrderDelivery">
+          <End Type="SushiModel.Adress" Role="Adress" Multiplicity="1" />
+          <End Type="SushiModel.OrderDelivery" Role="OrderDelivery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Adress">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="OrderDelivery">
+              <PropertyRef Name="Adress_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="OrderStatus" Relationship="SushiModel.OrderStatusOrder" FromRole="Order" ToRole="OrderStatus" />
+          <Property Type="Int32" Name="OrderStatus_idState" Nullable="false" />
+          <NavigationProperty Name="Person" Relationship="SushiModel.PersonOrder" FromRole="Order" ToRole="Person" />
+          <Property Type="Int32" Name="Person_idPerson" Nullable="false" />
+          <Property Type="String" Name="DateTime" Nullable="false" />
+          <NavigationProperty Name="DeliveryType" Relationship="SushiModel.DeliveryTypeOrder" FromRole="Order" ToRole="DeliveryType" />
+          <Property Type="Int32" Name="DeliveryType_idType" Nullable="false" />
+          <NavigationProperty Name="OrderDelivery" Relationship="SushiModel.OrderDeliveryOrder" FromRole="Order" ToRole="OrderDelivery" />
+          <Property Type="Int32" Name="OrderDelivery_id" Nullable="false" />
+          <NavigationProperty Name="Place" Relationship="SushiModel.PlaceOrder" FromRole="Order" ToRole="Place" />
+          <Property Type="Int32" Name="Place_id" Nullable="false" />
+          <Property Type="String" Name="sale" Nullable="false" />
+          <NavigationProperty Name="Duty" Relationship="SushiModel.DutyOrder" FromRole="Order" ToRole="Duty" />
+          <Property Type="String" Name="Duty_idDuty" Nullable="false" />
+        </EntityType>
+        <Association Name="OrderStatusOrder">
+          <End Type="SushiModel.OrderStatus" Role="OrderStatus" Multiplicity="1" />
+          <End Type="SushiModel.Order" Role="Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrderStatus">
+              <PropertyRef Name="idState" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="OrderStatus_idState" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PersonOrder">
+          <End Type="SushiModel.Person" Role="Person" Multiplicity="1" />
+          <End Type="SushiModel.Order" Role="Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Person">
+              <PropertyRef Name="idPerson" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="Person_idPerson" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="DeliveryTypeOrder">
+          <End Type="SushiModel.DeliveryType" Role="DeliveryType" Multiplicity="1" />
+          <End Type="SushiModel.Order" Role="Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DeliveryType">
+              <PropertyRef Name="idType" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="DeliveryType_idType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="OrderDeliveryOrder">
+          <End Type="SushiModel.OrderDelivery" Role="OrderDelivery" Multiplicity="1" />
+          <End Type="SushiModel.Order" Role="Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrderDelivery">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="OrderDelivery_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PlaceOrder">
+          <End Type="SushiModel.Place" Role="Place" Multiplicity="1" />
+          <End Type="SushiModel.Order" Role="Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Place">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="Place_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="DutyOrder">
+          <End Type="SushiModel.Duty" Role="Duty" Multiplicity="1" />
+          <End Type="SushiModel.Order" Role="Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Duty">
+              <PropertyRef Name="idDuty" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="Duty_idDuty" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="NomenclatureProductCompose">
+          <End Type="SushiModel.Nomenclature" Role="Nomenclature" Multiplicity="1" />
+          <End Type="SushiModel.ProductCompose" Role="ProductCompose" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nomenclature">
+              <PropertyRef Name="idNom" />
+            </Principal>
+            <Dependent Role="ProductCompose">
+              <PropertyRef Name="Nomenclature_idNom" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="NomenclatureProductCompose1">
+          <End Type="SushiModel.Nomenclature" Role="Nomenclature" Multiplicity="1" />
+          <End Type="SushiModel.ProductCompose" Role="ProductCompose" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nomenclature">
+              <PropertyRef Name="idNom" />
+            </Principal>
+            <Dependent Role="ProductCompose">
+              <PropertyRef Name="Nomenclature_idNom1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="NomenclatureStoreGoods">
+          <End Type="SushiModel.Nomenclature" Role="Nomenclature" Multiplicity="1" />
+          <End Type="SushiModel.StoreGoods" Role="StoreGoods" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nomenclature">
+              <PropertyRef Name="idNom" />
+            </Principal>
+            <Dependent Role="StoreGoods">
+              <PropertyRef Name="Nomenclature_idNom" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SushiModelStoreContainer" CdmEntityContainer="SushiContainer">
+    <EntitySetMapping Name="Unit_dimentionNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.UnitDimention)">
+        <MappingFragment StoreEntitySet="Unit_dimentionNumber">
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CategoryNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.Category)">
+        <MappingFragment StoreEntitySet="CategoryNumber">
+          <ScalarProperty Name="idCategory" ColumnName="idCategory" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="menuPresence" ColumnName="menuPresence" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductComposeNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.ProductCompose)">
+        <MappingFragment StoreEntitySet="ProductComposeNumber">
+          <ScalarProperty Name="Nomenclature_idNom" ColumnName="Nomenclature_idNom" />
+          <ScalarProperty Name="Nomenclature_idNom1" ColumnName="Nomenclature_idNom1" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="UnitDimentionName" ColumnName="UnitDimentionName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.User)">
+        <MappingFragment StoreEntitySet="UserNumber">
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="Person_idPerson" ColumnName="Person_idPerson" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonNmber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.Person)">
+        <MappingFragment StoreEntitySet="PersonNmber">
+          <ScalarProperty Name="idPerson" ColumnName="idPerson" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="telNum" ColumnName="telNum" />
+          <ScalarProperty Name="birthDate" ColumnName="birthDate" />
+          <ScalarProperty Name="snils" ColumnName="snils" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PasportNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.Pasport)">
+        <MappingFragment StoreEntitySet="PasportNumber">
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="getDate" ColumnName="getDate" />
+          <ScalarProperty Name="giver" ColumnName="giver" />
+          <ScalarProperty Name="PersonIdPerson" ColumnName="PersonIdPerson" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PostNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.Post)">
+        <MappingFragment StoreEntitySet="PostNumber">
+          <ScalarProperty Name="idPost" ColumnName="idPost" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployeeNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.Employee)">
+        <MappingFragment StoreEntitySet="EmployeeNumber">
+          <ScalarProperty Name="Post_idPost" ColumnName="Post_idPost" />
+          <ScalarProperty Name="Person_idPerson" ColumnName="Person_idPerson" />
+          <ScalarProperty Name="firstDate" ColumnName="firstDate" />
+          <ScalarProperty Name="lastDate" ColumnName="lastDate" />
+          <ScalarProperty Name="workbookNum" ColumnName="workbookNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DutyNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.Duty)">
+        <MappingFragment StoreEntitySet="DutyNumber">
+          <ScalarProperty Name="idDuty" ColumnName="idDuty" />
+          <ScalarProperty Name="EmployeePost_idPost" ColumnName="EmployeePost_idPost" />
+          <ScalarProperty Name="EmployeePerson_idPerson" ColumnName="EmployeePerson_idPerson" />
+          <ScalarProperty Name="hours" ColumnName="hours" />
+          <ScalarProperty Name="deduction" ColumnName="deduction" />
+          <ScalarProperty Name="promotion" ColumnName="promotion" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChangeTypeНабор">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.ChangeType)">
+        <MappingFragment StoreEntitySet="ChangeTypeНабор">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderStatusNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.OrderStatus)">
+        <MappingFragment StoreEntitySet="OrderStatusNumber">
+          <ScalarProperty Name="idState" ColumnName="idState" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeliveryTypeNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.DeliveryType)">
+        <MappingFragment StoreEntitySet="DeliveryTypeNumber">
+          <ScalarProperty Name="idType" ColumnName="idType" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StoreNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.Store)">
+        <MappingFragment StoreEntitySet="StoreNumber">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="Store_name" ColumnName="Store_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StoreGoodsNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.StoreGoods)">
+        <MappingFragment StoreEntitySet="StoreGoodsNumber">
+          <ScalarProperty Name="dateTime" ColumnName="dateTime" />
+          <ScalarProperty Name="Document_id" ColumnName="Document_id" />
+          <ScalarProperty Name="Nomenclature_idNom" ColumnName="Nomenclature_idNom" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="ChangeType_id" ColumnName="ChangeType_id" />
+          <ScalarProperty Name="Store_name" ColumnName="Store_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocumentNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.Document)">
+        <MappingFragment StoreEntitySet="DocumentNumber">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="DocumentType_id" ColumnName="DocumentType_id" />
+          <ScalarProperty Name="Store_name" ColumnName="Store_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocumentTypeNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.DocumentType)">
+        <MappingFragment StoreEntitySet="DocumentTypeNumber">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AdressNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.Adress)">
+        <MappingFragment StoreEntitySet="AdressNumber">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="street" ColumnName="street" />
+          <ScalarProperty Name="house" ColumnName="house" />
+          <ScalarProperty Name="flat" ColumnName="flat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlaceNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.Place)">
+        <MappingFragment StoreEntitySet="PlaceNumber">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderDeliveryNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.OrderDelivery)">
+        <MappingFragment StoreEntitySet="OrderDeliveryNumber">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="Adress_id" ColumnName="Adress_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.Order)">
+        <MappingFragment StoreEntitySet="OrderNumber">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="OrderStatus_idState" ColumnName="OrderStatus_idState" />
+          <ScalarProperty Name="Person_idPerson" ColumnName="Person_idPerson" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="DeliveryType_idType" ColumnName="DeliveryType_idType" />
+          <ScalarProperty Name="OrderDelivery_id" ColumnName="OrderDelivery_id" />
+          <ScalarProperty Name="Place_id" ColumnName="Place_id" />
+          <ScalarProperty Name="sale" ColumnName="sale" />
+          <ScalarProperty Name="Duty_idDuty" ColumnName="Duty_idDuty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NomenclatureНабор">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.Nomenclature)">
+        <MappingFragment StoreEntitySet="NomenclatureНабор">
+          <ScalarProperty Name="idNom" ColumnName="idNom" />
+          <ScalarProperty Name="priceIn" ColumnName="priceIn" />
+          <ScalarProperty Name="priceOut" ColumnName="priceOut" />
+          <ScalarProperty Name="menuPresence" ColumnName="menuPresence" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="UnitDimention_name" ColumnName="UnitDimention_name" />
+          <ScalarProperty Name="CategoryIdCategory" ColumnName="CategoryIdCategory" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="dc74f067c9a346ecb8d4c69b3cb026f6" Name="SushiDiagram" ZoomLevel="72" DisplayType="true" >
+        <EntityTypeShape EntityType="SushiModel.UnitDimention" Width="1.5" PointX="6.25" PointY="0.5" />
+        <EntityTypeShape EntityType="SushiModel.Category" Width="1.5" PointX="0.5" PointY="4.5" />
+        <EntityTypeShape EntityType="SushiModel.Nomenclature" Width="1.5" PointX="0.5" PointY="0.875" />
+        <AssociationConnector Association="SushiModel.UnitDimentionNomenclature" />
+        <AssociationConnector Association="SushiModel.CategoryNomenclature" />
+        <EntityTypeShape EntityType="SushiModel.ProductCompose" Width="2.375" PointX="3.25" PointY="1.25" />
+        <AssociationConnector Association="SushiModel.UnitDimentionProductCompose" />
+        <EntityTypeShape EntityType="SushiModel.User" Width="1.5" PointX="10.375" PointY="0.5" />
+        <EntityTypeShape EntityType="SushiModel.Person" Width="1.5" PointX="11.125" PointY="2.75" />
+        <AssociationConnector Association="SushiModel.PersonUser" />
+        <EntityTypeShape EntityType="SushiModel.Pasport" Width="1.5" PointX="8.375" PointY="0.5" />
+        <AssociationConnector Association="SushiModel.PersonPasport" />
+        <EntityTypeShape EntityType="SushiModel.Post" Width="1.5" PointX="12.375" PointY="0.5" />
+        <EntityTypeShape EntityType="SushiModel.Employee" Width="1.5" PointX="13.5" PointY="2.625" />
+        <AssociationConnector Association="SushiModel.PostEmployee" />
+        <EntityTypeShape EntityType="SushiModel.Duty" Width="1.5" PointX="13" PointY="5.625" />
+        <AssociationConnector Association="SushiModel.PersonEmployee" />
+        <AssociationConnector Association="SushiModel.EmployeeDuty" />
+        <EntityTypeShape EntityType="SushiModel.ChangeType" Width="1.5" PointX="4.25" PointY="4" />
+        <EntityTypeShape EntityType="SushiModel.OrderStatus" Width="1.5" PointX="6.875" PointY="2.625" />
+        <EntityTypeShape EntityType="SushiModel.DeliveryType" Width="1.5" PointX="6.25" PointY="4.375" />
+        <EntityTypeShape EntityType="SushiModel.Store" Width="1.5" PointX="0.5" PointY="7" />
+        <AssociationConnector Association="SushiModel.StoreStore" />
+        <EntityTypeShape EntityType="SushiModel.StoreGoods" Width="1.5" PointX="2.375" PointY="3.875" />
+        <EntityTypeShape EntityType="SushiModel.Document" Width="1.5" PointX="4.875" PointY="6.25" />
+        <EntityTypeShape EntityType="SushiModel.DocumentType" Width="1.5" PointX="2.375" PointY="7.5" />
+        <AssociationConnector Association="SushiModel.DocumentTypeDocument" />
+        <AssociationConnector Association="SushiModel.StoreDocument" />
+        <AssociationConnector Association="SushiModel.ChangeTypeStoreGoods" />
+        <AssociationConnector Association="SushiModel.DocumentStoreGoods" />
+        <AssociationConnector Association="SushiModel.StoreStoreGoods" />
+        <EntityTypeShape EntityType="SushiModel.Adress" Width="1.5" PointX="8.25" PointY="7.5" />
+        <EntityTypeShape EntityType="SushiModel.Place" Width="1.5" PointX="6.625" PointY="6.375" />
+        <EntityTypeShape EntityType="SushiModel.OrderDelivery" Width="1.5" PointX="11" PointY="6.625" />
+        <AssociationConnector Association="SushiModel.AdressOrderDelivery" />
+        <EntityTypeShape EntityType="SushiModel.Order" Width="1.5" PointX="9.125" PointY="3.375" />
+        <AssociationConnector Association="SushiModel.OrderStatusOrder" />
+        <AssociationConnector Association="SushiModel.PersonOrder" />
+        <AssociationConnector Association="SushiModel.DeliveryTypeOrder" />
+        <AssociationConnector Association="SushiModel.OrderDeliveryOrder" />
+        <AssociationConnector Association="SushiModel.PlaceOrder" />
+        <AssociationConnector Association="SushiModel.DutyOrder" />
+        <AssociationConnector Association="SushiModel.NomenclatureProductCompose" />
+        <AssociationConnector Association="SushiModel.NomenclatureProductCompose1" />
+        <AssociationConnector Association="SushiModel.NomenclatureStoreGoods" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

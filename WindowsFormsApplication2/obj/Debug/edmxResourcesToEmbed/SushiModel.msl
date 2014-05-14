@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SushiModelStoreContainer" CdmEntityContainer="SushiContainer">
+    <EntitySetMapping Name="Unit_dimentionNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.UnitDimention)">
+        <MappingFragment StoreEntitySet="Unit_dimentionNumber">
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CategoryNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.Category)">
+        <MappingFragment StoreEntitySet="CategoryNumber">
+          <ScalarProperty Name="idCategory" ColumnName="idCategory" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="menuPresence" ColumnName="menuPresence" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductComposeNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.ProductCompose)">
+        <MappingFragment StoreEntitySet="ProductComposeNumber">
+          <ScalarProperty Name="Nomenclature_idNom" ColumnName="Nomenclature_idNom" />
+          <ScalarProperty Name="Nomenclature_idNom1" ColumnName="Nomenclature_idNom1" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="UnitDimentionName" ColumnName="UnitDimentionName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.User)">
+        <MappingFragment StoreEntitySet="UserNumber">
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="Person_idPerson" ColumnName="Person_idPerson" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonNmber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.Person)">
+        <MappingFragment StoreEntitySet="PersonNmber">
+          <ScalarProperty Name="idPerson" ColumnName="idPerson" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="telNum" ColumnName="telNum" />
+          <ScalarProperty Name="birthDate" ColumnName="birthDate" />
+          <ScalarProperty Name="snils" ColumnName="snils" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PasportNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.Pasport)">
+        <MappingFragment StoreEntitySet="PasportNumber">
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="getDate" ColumnName="getDate" />
+          <ScalarProperty Name="giver" ColumnName="giver" />
+          <ScalarProperty Name="PersonIdPerson" ColumnName="PersonIdPerson" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PostNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.Post)">
+        <MappingFragment StoreEntitySet="PostNumber">
+          <ScalarProperty Name="idPost" ColumnName="idPost" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployeeNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.Employee)">
+        <MappingFragment StoreEntitySet="EmployeeNumber">
+          <ScalarProperty Name="Post_idPost" ColumnName="Post_idPost" />
+          <ScalarProperty Name="Person_idPerson" ColumnName="Person_idPerson" />
+          <ScalarProperty Name="firstDate" ColumnName="firstDate" />
+          <ScalarProperty Name="lastDate" ColumnName="lastDate" />
+          <ScalarProperty Name="workbookNum" ColumnName="workbookNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DutyNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.Duty)">
+        <MappingFragment StoreEntitySet="DutyNumber">
+          <ScalarProperty Name="idDuty" ColumnName="idDuty" />
+          <ScalarProperty Name="EmployeePost_idPost" ColumnName="EmployeePost_idPost" />
+          <ScalarProperty Name="EmployeePerson_idPerson" ColumnName="EmployeePerson_idPerson" />
+          <ScalarProperty Name="hours" ColumnName="hours" />
+          <ScalarProperty Name="deduction" ColumnName="deduction" />
+          <ScalarProperty Name="promotion" ColumnName="promotion" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChangeTypeНабор">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.ChangeType)">
+        <MappingFragment StoreEntitySet="ChangeTypeНабор">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderStatusNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.OrderStatus)">
+        <MappingFragment StoreEntitySet="OrderStatusNumber">
+          <ScalarProperty Name="idState" ColumnName="idState" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeliveryTypeNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.DeliveryType)">
+        <MappingFragment StoreEntitySet="DeliveryTypeNumber">
+          <ScalarProperty Name="idType" ColumnName="idType" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StoreNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.Store)">
+        <MappingFragment StoreEntitySet="StoreNumber">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="Store_name" ColumnName="Store_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StoreGoodsNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.StoreGoods)">
+        <MappingFragment StoreEntitySet="StoreGoodsNumber">
+          <ScalarProperty Name="dateTime" ColumnName="dateTime" />
+          <ScalarProperty Name="Document_id" ColumnName="Document_id" />
+          <ScalarProperty Name="Nomenclature_idNom" ColumnName="Nomenclature_idNom" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="ChangeType_id" ColumnName="ChangeType_id" />
+          <ScalarProperty Name="Store_name" ColumnName="Store_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocumentNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.Document)">
+        <MappingFragment StoreEntitySet="DocumentNumber">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="DocumentType_id" ColumnName="DocumentType_id" />
+          <ScalarProperty Name="Store_name" ColumnName="Store_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocumentTypeNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.DocumentType)">
+        <MappingFragment StoreEntitySet="DocumentTypeNumber">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AdressNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.Adress)">
+        <MappingFragment StoreEntitySet="AdressNumber">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="street" ColumnName="street" />
+          <ScalarProperty Name="house" ColumnName="house" />
+          <ScalarProperty Name="flat" ColumnName="flat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PlaceNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.Place)">
+        <MappingFragment StoreEntitySet="PlaceNumber">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderDeliveryNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.OrderDelivery)">
+        <MappingFragment StoreEntitySet="OrderDeliveryNumber">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="Adress_id" ColumnName="Adress_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderNumber">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.Order)">
+        <MappingFragment StoreEntitySet="OrderNumber">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="OrderStatus_idState" ColumnName="OrderStatus_idState" />
+          <ScalarProperty Name="Person_idPerson" ColumnName="Person_idPerson" />
+          <ScalarProperty Name="DateTime" ColumnName="DateTime" />
+          <ScalarProperty Name="DeliveryType_idType" ColumnName="DeliveryType_idType" />
+          <ScalarProperty Name="OrderDelivery_id" ColumnName="OrderDelivery_id" />
+          <ScalarProperty Name="Place_id" ColumnName="Place_id" />
+          <ScalarProperty Name="sale" ColumnName="sale" />
+          <ScalarProperty Name="Duty_idDuty" ColumnName="Duty_idDuty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NomenclatureНабор">
+      <EntityTypeMapping TypeName="IsTypeOf(SushiModel.Nomenclature)">
+        <MappingFragment StoreEntitySet="NomenclatureНабор">
+          <ScalarProperty Name="idNom" ColumnName="idNom" />
+          <ScalarProperty Name="priceIn" ColumnName="priceIn" />
+          <ScalarProperty Name="priceOut" ColumnName="priceOut" />
+          <ScalarProperty Name="menuPresence" ColumnName="menuPresence" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="UnitDimention_name" ColumnName="UnitDimention_name" />
+          <ScalarProperty Name="CategoryIdCategory" ColumnName="CategoryIdCategory" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
